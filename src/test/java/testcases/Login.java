@@ -8,6 +8,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import pageObjects.PropertiesReader;
+
 public class Login extends pageObjects.PageBase {
 		WebDriver driver = new FirefoxDriver();
 		@BeforeTest
@@ -20,8 +22,9 @@ public class Login extends pageObjects.PageBase {
 		public void underTest() throws InterruptedException{
 			
 			pageObjects.Home_Page hp = new pageObjects.Home_Page(driver);
-			hp.login_user();
+			hp.login_user(PropertiesReader.getUsername("username"), PropertiesReader.getPassword("password"));
 			System.out.print("Registered Successfully");
+			
 		}
 		@AfterTest
 		public void QuitDriver(){

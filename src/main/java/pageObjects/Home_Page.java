@@ -9,9 +9,9 @@ public class Home_Page extends PageBase {
 		PageBase.driver=driver;
 	}
 
-	public void login_user() throws InterruptedException{
-		driver.findElement(username).sendKeys("username@email.com");
-		driver.findElement(password).sendKeys("password");
+	public void login_user(String uname, String pwd) throws InterruptedException{
+		driver.findElement(username).sendKeys(uname);
+		driver.findElement(password).sendKeys(pwd);
 		driver.findElement(login).click();
 	}
 	
