@@ -28,6 +28,9 @@
 						<suiteXmlFiles>Test_Auto.xml</suiteXmlFiles>
 				     </suiteXmlFiles>
 				</configuration>
+				<goals>
+         <goal>java</goal>
+       </goals>
 			</plugin>
 		</plugins>
 	</build>
