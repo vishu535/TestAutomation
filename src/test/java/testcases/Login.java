@@ -1,0 +1,34 @@
+package testcases;
+
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Login extends pageObjects.PageBase {
+		WebDriver driver = new FirefoxDriver();
+		@BeforeTest
+		public void openUrl(){
+			driver.manage().window().maximize();
+			driver.get("http://newtours.demoaut.com/");
+		
+		}
+		@Test
+		public void underTest() throws InterruptedException{
+			
+			pageObjects.Home_Page hp = new pageObjects.Home_Page(driver);
+			hp.login_user();
+			System.out.print("Registered Successfully");
+		}
+		@AfterTest
+		public void QuitDriver(){
+			driver.quit();
+			  }
+			
+	}
+	
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Basic Automation Suite" verbose="1">
+
+	<test name="Deposits Basic Search Test" verbose="1">
+		<classes>
+			<class
+				name="testcases.Login" />
+		</classes>
+	</test>
+
+	<test name="Automation" verbose="1">
+		<classes>
+			<class name="testcases.Register" />
+		</classes>
+	</test>
+
+</suite>
